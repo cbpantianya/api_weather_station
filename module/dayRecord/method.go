@@ -8,8 +8,8 @@ import (
 )
 
 type RecordRequest struct {
-	Temperature float64 `json:"temperature"`
-	Humidity    float64 `json:"humidity"`
+	Temperature float64 `json:"temperature" binding:"required"`
+	Humidity    float64 `json:"humidity" binding:"required"`
 }
 
 type Record struct {
