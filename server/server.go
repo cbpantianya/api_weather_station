@@ -4,6 +4,7 @@ import (
 	"api_weather_station/config"
 	"api_weather_station/utils"
 	"fmt"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v9"
 	"github.com/rs/zerolog/log"
@@ -49,6 +50,7 @@ func (s *Server) initGin() {
 		break
 	}
 	s.HttpEngine.Use(gin.Recovery()) // 异常恢复
+	s.HttpEngine.Use(cors.Default()) // 跨域
 
 }
 
