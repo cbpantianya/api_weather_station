@@ -27,6 +27,6 @@ func (d DayRecord) Init() {
 
 func (d DayRecord) Serve(server *server.Server) {
 	group := server.HttpEngine.Group("/record")
-	group.GET("/upload", handleUploadFromStation())
+	group.POST("/upload", handleUploadFromStation())
 
 }
