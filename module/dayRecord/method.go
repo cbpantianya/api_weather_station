@@ -13,10 +13,10 @@ type RecordRequest struct {
 }
 
 type Record struct {
-	Temperature float64   `json:"temperature"`
-	Humidity    float64   `json:"humidity"`
-	Time        time.Time `json:"time"`
-	SN          string    `json:"sn"`
+	Temperature float64 `json:"temperature"`
+	Humidity    float64 `json:"humidity"`
+	Time        int64   `json:"time"`
+	SN          string  `json:"sn"`
 }
 
 func handleUploadFromStation() gin.HandlerFunc {
@@ -36,7 +36,7 @@ func handleUploadFromStation() gin.HandlerFunc {
 			record := Record{
 				Temperature: request.Temperature,
 				Humidity:    request.Humidity,
-				Time:        time.Now(),
+				Time:        time.Now().UnixMilli(),
 				SN:          sn,
 			}
 
