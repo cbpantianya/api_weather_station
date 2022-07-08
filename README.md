@@ -6,9 +6,8 @@
 参考代码:[微信公众号后端的快速开发框架](https://github.com/hduhelp/wechat-template)
 
 ---
-[嵌入式部分博客]()
+[嵌入式、前端部分博客](http://t.csdn.cn/CFWlR)
 
-[前端源码]()
 
 ## 配置文件说明
 
